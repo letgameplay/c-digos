@@ -12,6 +12,6 @@ function imc() {
     else if (resultado <= 29.9) situacao = "SOBREPESO"
     else if (resultado <= 39.9) situacao = "OBESIDADE"
     else situacao = "OBESIDADE GRAVE"
-    document.getElementById("situacao").innerHTML
-        "Situação " + situaçao
+    document.getElementById("situacao").innerHTML = 
+        "Situação " + situacao;
 }
