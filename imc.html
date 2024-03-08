@@ -9,16 +9,16 @@
 <body>
 <h2>Calculadora de IMC</h2>
 
-<form id="imccalculadora"></form>
-    <label for="massa">Massa (EM KG):</label><br>
-    <input type="number" name="massa" id="massa"><br><br>
-    <label for="altura">Altura (EM METROS):</label><br>
-    <input type="number" name="altura" id="altura"><br><br>
-    <button type="button" onclick="submeter()">Enviar</button>
-</form>
-
-<div id = resultado></div>
-<script src="imc.js"></script>
+    <form id="imccalculadora"></form>
+        <label for="massa">Massa (EM KG):</label><br>
+        <input type="number" id="massa" step="0.001"><br><br>
+        <label for="altura">Altura (EM METROS):</label><br>
+        <input type="number" id="altura" step="0.01"><br><br>
+        <input type="button" onclick="imc()" value="Calcular"> <br><br>
+    </form>
+    <p id="resultado" style="background-color: cyan;"></p>
+    <p id="situacao" style="background-color: coral;"></p>
+    <script src="imc.js"></script>
 
 </body>
 </html>

@@ -1,19 +1,17 @@
-function submeter() {
-    let confirma = confirm("Seguir");
-    if (confirma == true) {
-        let massa = document.getElementById("massa").value;
-        let altura = document.getElementById("altura").value;
-        document.getElementById("resultado").innerHTML =
-            "<h3> Informações Recebidas</h3>" +
-            "<p>Massa: " + massa + "</p>" +
-            "<p>Altura: " + altura + "</p>";
-        
-        let calculo = massa / (altura ** 2)
-        document.getElementById
+function imc() {
+    const massa = document.getElementById("massa").value;
+    const altura = document.querySelector("#altura").value;
 
-    }
-    else {
-        document.getElementById("resultado").innerHTML =
-        "<h2>Ação Cancelada</h2>";
-    }
+    const resultado = massa / (altura ** 2);
+    document.getElementById("resultado").innerHTML =
+        "Valor do IMC = " + resultado.toFixed(2);
+
+    let situacao;
+    if (resultado < 18.5) situacao = "MAGREZA"
+    else if (resultado <= 24.9) situacao = "NORMAL"
+    else if (resultado <= 29.9) situacao = "SOBREPESO"
+    else if (resultado <= 39.9) situacao = "OBESIDADE"
+    else situacao = "OBESIDADE GRAVE"
+    document.getElementById("situacao").innerHTML = 
+        "Situação " + situacao;
 }
