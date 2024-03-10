@@ -1,5 +1,5 @@
 
-       console.log(typeof(msg1));
+console.log(typeof(msg1));
 console.log(typeof(idade));
 
 
