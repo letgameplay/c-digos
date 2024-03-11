@@ -10,6 +10,8 @@ for (let i = 1; i <= 10; i++) {
     console.log(`Soma = ${soma}`);
 }
 
+i++ = i = i + 1 ou i+ = 1
+mesma coisa para i --
 */
 
 console.log('\nTabela-verdade AND');
