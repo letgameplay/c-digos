@@ -7,7 +7,16 @@ function palavrinhas() {
         document.getElementById('resultado').innerHTML = 'Preencha todos os campos.';
         return;}
 
-    let novafrase = c.replace(new RegExp(a, 'g'), b);
+    let novafrase = c.split(' ');
+        for (let i = 0; i < novafrase.length; i++){ // i = indice
+            if (novafrase[i] == a) {
+                novafrase[i] = b 
+            } 
+        }
+
+            
+    let nova = novafrase.join(' ')
     document.getElementById('resultado').innerHTML = 
-     `${novafrase}`
-}
+     `${nova}` 
+
+    }
