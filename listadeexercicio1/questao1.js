@@ -1,3 +1,3 @@
- (n)
-
-let ano
+function calcid() {
+    let dataNasci = document.querySelector().value;
+}
