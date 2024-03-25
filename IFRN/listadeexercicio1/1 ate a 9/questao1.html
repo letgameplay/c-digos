@@ -1,14 +1,29 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Venha calcular sua idade!</title>
+<meta charset="UTF-8">
+<title>Calcular Idade</title>
 </head>
 <body>
-    <h2>Calcular idade</h2>
-    <label for="Data de Nascimento"></label>
-    
+
+<label for="dataNascimento">Data de Nascimento:</label>
+<input type="date" id="dataNascimento">
+<button onclick="calcularIdade()">Calcular Idade</button>
+
+<p>Idade: <span id="resultado"></span> anos</p>
+
+<script>
+function calcularIdade() {
+    var dataNascimento = document.getElementById('dataNascimento').value;
+    var dataNascimentoObj = new Date(dataNascimento);
+    var atual = new Date();
+    var idade = atual.getFullYear() - dataNascimentoObj.getFullYear();
+    var m = atual.getMonth() - dataNascimentoObj.getMonth();
+    if (m < 0 || (m === 0 && atual.getDate() < dataNascimentoObj.getDate())) {
+        idade--;
+    }
+    document.getElementById('resultado').innerText = idade;
+}
+</script>
+
 </body>
-</html>
