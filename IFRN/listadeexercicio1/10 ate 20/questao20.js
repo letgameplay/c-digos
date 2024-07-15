@@ -14,7 +14,7 @@ function cadast() {
     else if (!telefone) {
         alert('PREENCHA O TELEFONE') }
     else if (!senha) {
-        alert('PREENCHA O NOME') }
+        alert('PREENCHA A SENHA') }
     else if (!confirmacao) {
         alert("CONFIRME A SENHA") }
     else if (senha != confirmacao) {
