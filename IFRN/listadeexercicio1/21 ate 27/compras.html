@@ -18,15 +18,31 @@
 <body>
     <h2>PIZZAS</h2>
     <form id="formproduto">
-        <label for="npizza">Pizza: </label>
+        <label for="npizza">Pizza (APENAS UM SABOR): </label>
         <input type="text" id="npizza" required> <br>
-        <label for="preco">Valor: </label> <br>
+        <label for="preco">Valor: </label>
         <input type="number" id="preco" required><br>
         <label for="cat">Tamanho:</label>
         <select id="cat" required>
-            <option value="Pequena"></option>
+            <option value="Pequena">Pequena</option>
+            <option value="Media">Média</option>
+            <option value="Grande">Grande</option>
         </select>
+        <br>
+        <label for="desc">Alguma informação adicional? </label>
+        <textarea id="desc" required></textarea>
+        <br>
+        <button type="button" onclick="ap()">Fazer pedido</button>
     </form>
-    
+
+    <h2>PEDIDOS</h2>
+    <table id="tabela">
+        <tr>
+            <th>Pizza</th>
+            <th>Preço</th>
+            <th>Tamanho</th>
+            <th>Descrição</th>
+        </tr></table>
+        <script src="compras.js"></script>
 </body>
 </html>
