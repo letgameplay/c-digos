@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Jogo da Velha</title>
 </head>
 <body>
-    <table>
-        <tr>
-            <td onclick="marcar(this,0,0)"></td>
+    <table> <!-- tabela -->
+        <tr> <!-- linha (horizonal)-->
+            <td onclick="marcar(this,0,0)"></td> <!-- coluna (vertical)-->
             <td onclick="marcar(this,0,1)"></td>
-            <td onclick="marcar(this,0,2)"></td>        
+            <td onclick="marcar(this,0,2)"></td>  
+
+            <!-- this - se refere a sua celula, substitui o id -->
+             
         </tr>
         <tr>
             <td onclick="marcar(this,1,0)"></td>
@@ -24,5 +27,7 @@
             <td onclick="marcar(this,2,2)"></td>        
         </tr>         
     </table>
+    <p id="resultado"></p>
 </body>
+<script src="jogodavelha.js"></script>
 </html>
