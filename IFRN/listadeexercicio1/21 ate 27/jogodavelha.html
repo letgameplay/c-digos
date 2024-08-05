@@ -5,13 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo da Velha</title>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: arial, sans-serif;
+        background-color: darkcyan;
+    }
+
+    .container{
+        text-align: center;
+        border: 1px solid #ddd;
+        padding: 20px;
+        background-color: blueviolet;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    table {
+        border-collapse: collapse;
+        width: 300px;
+        height: 300px;
+    }
+    td {
+        border: 1px solid black;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 24px;
+        cursor: pointer;
+        width: 100px;
+        height: 100px;
+    }
+</style>
 </head>
 <body>
+    <div class="container">
+    <h2>JOGO DA VELHA</h2>
     <table> <!-- tabela -->
         <tr> <!-- linha (horizonal)-->
-            <td onclick="marcar(this,0,0)"></td> <!-- coluna (vertical)-->
-            <td onclick="marcar(this,0,1)"></td>
-            <td onclick="marcar(this,0,2)"></td>  
+            <td onclick="marcar(this, 0, 0)"></td> <!-- coluna (vertical)-->
+            <td onclick="marcar(this, 0, 1)"></td>
+            <td onclick="marcar(this, 0, 2)"></td>  
+
 
             <!-- this - se refere a sua celula, substitui o id -->
              
@@ -25,9 +61,12 @@
             <td onclick="marcar(this,2,0)"></td>
             <td onclick="marcar(this,2,1)"></td>
             <td onclick="marcar(this,2,2)"></td>        
-        </tr>         
+        </tr>        
     </table>
     <p id="resultado"></p>
+    <button onclick="resetar()">Jogar Novamente</button>
+    </div>
+    <script src="jogodavelha.js"></script>
 </body>
-<script src="jogodavelha.js"></script>
 </html>
+
