@@ -10,3 +10,4 @@ const pessoa = {
 
 console.log(pessoa.nome); // João
 console.log(pessoa.saudacao()); // Olá, meu nome é João
+
