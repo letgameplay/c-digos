@@ -1,16 +1,27 @@
-const url = 'https://jsonplaceholder.typicode.com/posts'
-
-fetch (url)
+function comentarios() {
+    const id = document.getElementById("coment").value 
+    const url = `https://jsonplaceholder.typicode.com/comments?postId=${id}`
+    
+    fetch (url)
     .then (response => response.json())
-    .then (data => usuarios(data))
-    .catch(error => {
-		const ListaPost = document.getElementById('listapost')
-		ListaPost.innerHTML = `<div class="error"> Ocorreu um erro: ${error.message}</div>`
-    })
+    .then (data => showcomentarios(data))
+}
 
-    function usuarios(posts){
-        const postagem = document.getElementById(postagem)
-        postagem.innerHTML = ''
+    function showcomentarios(coments){
+        const ListaPost = document.getElementById('listapost')
+        ListaPost.innerHTML = ''
+            
+            coments.forEach(coment => {
+                const elpost = document.createElement('div')
+                elpost.className = 'post'
+                elpost.innerHTML = `
+                    <p>Id: ${coment.id}</p>
+				    <p>Titulo: ${coment.name}</p>
+				    <p>Comentario: ${coment.body}</p>
+                    <h1>-------------</h1>`
 
-    const post = document.getElementById('ElemEsc')
-    }
+                    ListaPost.appendChild(elpost)
+            })
+
+            
+        }
