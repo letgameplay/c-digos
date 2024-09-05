@@ -38,7 +38,7 @@ function resultado() { // botão chama a função resultado
                     <tbody> <!-- Corpo da tabela -->
                         <tr>
                             <td><img src= "https://flagpedia.net/data/flags/h80/ar.png" alt="${match.home_team.country}" class="flag"> ${match.home_team.name}</td>
-                            <td>${match.home_team.goals}</td>
+                            <td>${match.home_team.goals}</td> <!-- Conteúdo do elemento da coluna (célula) -->
                             <td>${match.home_team.penalties}</td>
                         </tr>
                         <tr>
