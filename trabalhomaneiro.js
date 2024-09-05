@@ -12,10 +12,10 @@ function resultado() { // botão chama a função resultado
         const ListaPost = document.getElementById('listapost') // elemento onde os dados são exibidos no html e vericação que está limpo
         ListaPost.innerHTML = ''
 
-        const datetime = new Date(match.datetime) // converte a string para um objeto date
+        const datetime = new Date(match.datetime) // converte a string para um objeto date (objeto que guarda as informações de uma data)
 
         const post = document.createElement('div') // criação de div para inserir os detalhes da partida
-        post.className = 'post'
+        post.className = 'post' // foi criada uma formatação padrão para todos os posts no HTML, e com o classname é possivel que todos os elementos post fiquem com esse design. 
 
         // define o conteudo do html na div criada
         post.innerHTML = `
@@ -26,16 +26,16 @@ function resultado() { // botão chama a função resultado
         <p>Hora: ${datetime.toLocaleTimeString()}</p> <!-- Exibe o horário da partida -->
         <p>Localização: Estádio ${match.venue} em ${match.location}</p><br> <!-- Exibe a localização da partida -->
         <h3>Gols e Penalidades:</h3>
-                <table>
+                <table> <!-- Inicio da tabela -->
                     <caption>Resumo dos Times</caption> <!-- Titulo da tabela -->
-                    <thead>
+                    <thead> <!-- Cabeçalho da tabela -->
                         <tr>
-                            <th>Equipe</th> <!-- coluna -->
+                            <th>Equipe</th> <!-- Coluna -->
                             <th>Gols</th>
                             <th>Penalidades</th>
-                        </tr>
+                        </tr> <!-- Linha -->
                     </thead>
-                    <tbody>
+                    <tbody> <!-- Corpo da tabela -->
                         <tr>
                             <td><img src= "https://flagpedia.net/data/flags/h80/ar.png" alt="${match.home_team.country}" class="flag"> ${match.home_team.name}</td>
                             <td>${match.home_team.goals}</td>
@@ -51,10 +51,10 @@ function resultado() { // botão chama a função resultado
                             <td>${match.home_team.goals} - ${match.away_team.goals}</td>
                             <td>${match.home_team.penalties} - ${match.away_team.penalties}</td>
                         </tr>
-                    </tbody>
-                </table>
+                    </tbody> <!-- Finaliza o corpo da tabela -->
+                </table> <!-- Finaliza a tabela -->
         <p>Público: ${match.attendance} pessoas</p>
         `
 
-        ListaPost.appendChild(post);
+        ListaPost.appendChild(post); // Adiciona a div com a classe 'post' e seu conteúdo ao elemento ListaPost
         }
