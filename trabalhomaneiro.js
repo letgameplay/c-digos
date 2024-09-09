@@ -47,7 +47,7 @@ function resultado() { // botão chama a função resultado
                             <td>${match.away_team.penalties}</td>
                         </tr>
                         <tr>
-                            <td><strong>Resultado Final</strong></td>
+                            <td><b>Resultado Final</b></td>
                             <td>${match.home_team.goals} - ${match.away_team.goals}</td>
                             <td>${match.home_team.penalties} - ${match.away_team.penalties}</td>
                         </tr>
