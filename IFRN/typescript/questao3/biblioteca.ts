@@ -1,4 +1,4 @@
-import { Livro3 } from './questao3.ts'
+import { Livro3 } from './classlivro3'
 export class Biblioteca {
     private livros: Livro3[] = []; //livros é uma lista de objetos criadas na classe Livro3
 

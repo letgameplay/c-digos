@@ -1,5 +1,5 @@
-import { Livro3 } from "./questao3.ts";
-import { Biblioteca } from "./biblioteca.ts";
+import { Livro3 } from "./classlivro3";
+import { Biblioteca } from "./biblioteca";
 
 const biblioteca = new Biblioteca();
 
